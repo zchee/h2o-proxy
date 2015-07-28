@@ -41,9 +41,7 @@ ENV DOCKER_HOST unix:///tmp/docker.sock
 RUN mkdir -p /etc/h2o
 COPY h2o.conf /etc/h2o/
 
-RUN mkdir -p /var/run/h2o/
-RUN touch /var/run/h2o/access-log
-RUN touch /var/run/h2o/error-log
-RUN mkdir -p /var/log/h2o/
+RUN mkdir -p /var/run/h2o/ /var/log/h2o/
+RUN touch /var/run/h2o/access-log /var/run/h2o/error-log
 
 CMD ["forego", "start", "-r"]
