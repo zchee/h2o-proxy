@@ -1,7 +1,7 @@
 h2o-proxy sets up a container running h2o and Server::Starter and [docker-gen][1].  
 docker-gen generates reverse proxy configs for h2o and reloads h2o use Server::Starter when containers are started and stopped.
 
-### Usage
+## Usage
 
 To run it:
 
@@ -19,4 +19,11 @@ If your are using `boot2docker` start `h2o-proxy` with:
     $ docker run -p 80:80 -e DOCKER_HOST -e DOCKER_CERT_PATH -e DOCKER_TLS_VERIFY -v $DOCKER_CERT_PATH:$DOCKER_CERT_PATH -it zchee/h2o-proxy
 
   [1]: https://github.com/jwilder/docker-gen
+
+## TODO
+
+- [ ] Support HTTP/2 (https)
+- [ ] Not dependent perl and Server::Starter
+- [ ] Tuning performance default h2o.conf
+- [ ] Tuning performance default sysctl.conf
 
