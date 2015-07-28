@@ -1,7 +1,7 @@
 ## Feature
 
 h2o-proxy sets up a container running [H2O](https://github.com/h2o/h2o) and [docker-gen](https://github.com/jwilder/docker-gen).  
-docker-gen generates reverse proxy configs for H2O and reloads H2O use Server::Starter when containers are started and stopped.  
+docker-gen generates reverse proxy configs for H2O and reloads H2O use start_server when containers are started and stopped.  
 An alternative [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy).
 
 Based `FROM` image is [zchee/docker-h2o](https://github.com/zchee/docker-h2o).
