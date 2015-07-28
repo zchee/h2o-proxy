@@ -1,7 +1,8 @@
 ## Feature
 
-h2o-proxy sets up a container running [h2o](https://github.com/h2o/h2o) and [Server::Starter](https://github.com/kazuho/p5-Server-Starter) and [docker-gen](https://github.com/jwilder/docker-gen).  
-docker-gen generates reverse proxy configs for h2o and reloads h2o use Server::Starter when containers are started and stopped.
+h2o-proxy sets up a container running [H2O](https://github.com/h2o/h2o) and [Server::Starter](https://github.com/kazuho/p5-Server-Starter) and [docker-gen](https://github.com/jwilder/docker-gen).  
+docker-gen generates reverse proxy configs for H2O and reloads H2O use Server::Starter when containers are started and stopped.  
+An alternative [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy).
 
 ## Usage
 
@@ -22,7 +23,7 @@ If your are using `boot2docker` start `h2o-proxy` with:
 
 ## TODO
 
-- [ ] Support HTTP/2 (https)
+- [ ] Support HTTP/2 Reverse Proxy ( Wait for the support of H2O )
 - [ ] Not dependent perl and Server::Starter
 - [ ] Tuning performance default h2o.conf
 - [ ] Tuning performance default sysctl.conf
