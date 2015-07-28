@@ -1,4 +1,6 @@
-h2o-proxy sets up a container running h2o and Server::Starter and [docker-gen][1].  
+## Feature
+
+h2o-proxy sets up a container running [h2o](https://github.com/h2o/h2o) and [Server::Starter](https://github.com/kazuho/p5-Server-Starter) and [docker-gen](https://github.com/jwilder/docker-gen).  
 docker-gen generates reverse proxy configs for h2o and reloads h2o use Server::Starter when containers are started and stopped.
 
 ## Usage
@@ -17,8 +19,6 @@ If your are using `boot2docker` start `h2o-proxy` with:
 
     $ $(boot2docker shellinit)
     $ docker run -p 80:80 -e DOCKER_HOST -e DOCKER_CERT_PATH -e DOCKER_TLS_VERIFY -v $DOCKER_CERT_PATH:$DOCKER_CERT_PATH -it zchee/h2o-proxy
-
-  [1]: https://github.com/jwilder/docker-gen
 
 ## TODO
 
