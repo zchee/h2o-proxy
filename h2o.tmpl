@@ -17,6 +17,11 @@
     access-log: /dev/stdout
 {{ end }}
 
+max-connections: 65536
+limit-request-body: 536870912
+num-threads: 16
+num-name-resolution-threads: 1
+
 listen:
   host: 0.0.0.0
   port: 80
