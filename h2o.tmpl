@@ -7,15 +7,18 @@
         # proxy.reverse.url: "http://127.0.0.1:8080/"
         proxy.reverse.url: "http://{{ .Container.Node.Address.IP }}:{{ .Address.HostPort }}"
         proxy.preserve-host: ON
+        proxy.timeout.keepalive: 0
       {{ else }}
         # {{ .Container.Name }}
         proxy.reverse.url: "http://{{ .Address.IP }}:{{ .Address.Port }}"
         proxy.preserve-host: ON
+        proxy.timeout.keepalive: 0
       {{ end }}
       {{ else }}
         # {{ .Container.Name }}
         proxy.reverse.url: "http://{{ .Container.IP }} down"
         proxy.preserve-host: ON
+        proxy.timeout.keepalive: 0
       {{ end }}
     access-log: /dev/stdout
 {{ end }}
