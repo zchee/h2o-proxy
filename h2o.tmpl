@@ -6,13 +6,16 @@
         # {{ .Container.Node.Name }}/{{ .Container.Name }}
         # proxy.reverse.url: "http://127.0.0.1:8080/"
         proxy.reverse.url: "http://{{ .Container.Node.Address.IP }}:{{ .Address.HostPort }}"
+        proxy.preserve-host: ON
       {{ else }}
         # {{ .Container.Name }}
         proxy.reverse.url: "http://{{ .Address.IP }}:{{ .Address.Port }}"
+        proxy.preserve-host: ON
       {{ end }}
       {{ else }}
         # {{ .Container.Name }}
         proxy.reverse.url: "http://{{ .Container.IP }} down"
+        proxy.preserve-host: ON
       {{ end }}
     access-log: /dev/stdout
 {{ end }}
@@ -21,6 +24,7 @@ max-connections: 65536
 limit-request-body: 536870912
 num-threads: 16
 num-name-resolution-threads: 1
+http2-reprioritize-blocking-assets: ON
 
 listen:
   host: 0.0.0.0
@@ -30,6 +34,7 @@ hosts:
     paths:
       /:
         proxy.reverse.url: http://127.0.0.1:5000/
+        proxy.preserve-host: ON
     access-log: /dev/stdout
 
 {{ range $host, $containers := groupByMulti $ "Env.VIRTUAL_HOST" "," }}
