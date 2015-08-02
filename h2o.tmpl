@@ -37,8 +37,7 @@ hosts:
   "127.0.0.1:80":
     paths:
       /:
-        proxy.reverse.url: http://127.0.0.1:5000/
-        proxy.preserve-host: ON
+        file.dir: /h2o/examples/doc_root
     access-log: /dev/stdout
 
 {{ range $host, $containers := groupByMulti $ "Env.VIRTUAL_HOST" "," }}
