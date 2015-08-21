@@ -31,4 +31,4 @@ If your are using `boot2docker` start `h2o-proxy` with:
 - [ ] Support HTTP/2 Reverse Proxy ( Wait for the support of H2O )
 - [x] Not dependent perl and Server::Starter
   - `start_server` use a included script in the H2O
-
+- `reprioritize-blocking-assets` ooptions 
