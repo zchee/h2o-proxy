@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+
+test:
+  override:
+    - docker build -t zchee/h2o-proxy -f Dockerfile.no-buildarg .
+
+
