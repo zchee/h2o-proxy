@@ -3,7 +3,7 @@ MAINTAINER zchee <zcheeee@gmail.com>
 
 # Set docker-gen version env
 ARG DOCKERGEN_VERSION
-ENV DOCKERGEN_VERSION ${DOCKERGEN_VERSION:-0.4.3}
+ENV DOCKERGEN_VERSION ${DOCKERGEN_VERSION:-0.5.0}
 
 # Set $DOCKER_HOST env
 ENV DOCKER_HOST unix:///tmp/docker.sock
