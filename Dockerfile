@@ -1,5 +1,5 @@
 FROM zchee/h2o
-MAINTAINER zchee <zcheeee@gmail.com>
+MAINTAINER zchee <k@zchee.io>
 
 # Set docker-gen version env
 ARG DOCKERGEN_VERSION
